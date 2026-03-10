@@ -1067,6 +1067,31 @@
       function bindEvents() {
         document.addEventListener("keydown", handleGlobalKeydown);
 
+        const handleEntryListClick = (event) => {
+          const actionTarget = event.target.closest("[data-action]");
+          if (!actionTarget) {
+            return;
+          }
+
+          const action = actionTarget.dataset.action;
+
+          if (action === "cycle-status") {
+            const entryId = actionTarget.dataset.entryId;
+            if (entryId) {
+              cycleTodoStatus(entryId);
+            }
+            return;
+          }
+
+          if (action === "filter-tag") {
+            const tag = actionTarget.dataset.tag || "";
+            applyTagFilter(tag);
+          }
+        };
+
+        refs.logList.addEventListener("click", handleEntryListClick);
+        refs.goalsList.addEventListener("click", handleEntryListClick);
+
         document.body.addEventListener("click", (event) => {
           const target = event.target;
 
@@ -1113,12 +1138,18 @@
           }
 
           if (action === "filter-tag") {
+            if (actionTarget.closest("[data-list='entries']")) {
+              return;
+            }
             const tag = actionTarget.dataset.tag || "";
             applyTagFilter(tag);
             return;
           }
 
           if (action === "cycle-status") {
+            if (actionTarget.closest("[data-list='entries']")) {
+              return;
+            }
             const entryId = actionTarget.dataset.entryId;
             if (entryId) {
               cycleTodoStatus(entryId);
