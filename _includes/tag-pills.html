@@ -1,0 +1,9 @@
+{% assign tags = include.tags | default: page.tags %}
+{% assign tags_url = '/tags/' | relative_url %}
+{% if tags and tags.size > 0 %}
+  <div class="tag-pills">
+    {% for tag in tags %}
+      <a class="tag-pill" href="{{ tags_url }}#tag-{{ tag | slugify }}">#{{ tag }}</a>
+    {% endfor %}
+  </div>
+{% endif %}

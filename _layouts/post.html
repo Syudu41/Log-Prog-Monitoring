@@ -1,0 +1,64 @@
+---
+layout: default
+---
+<article class="entry-page">
+  <header class="entry-header">
+    <h1>{{ page.title }}</h1>
+    {% assign created = page.date_created | default: page.date %}
+    {% assign updated = page.date_modified | default: created %}
+    <p class="entry-meta">
+      Created {{ created | date: "%b %-d, %Y" }}
+      <span class="meta-separator">&middot;</span>
+      Updated {{ updated | date: "%b %-d, %Y" }}
+      <span class="meta-separator">&middot;</span>
+      <a href="{{ '/' | append: page.collection | append: '/' | relative_url }}">{{ page.collection }}</a>
+    </p>
+    {% include tag-pills.html tags=page.tags %}
+  </header>
+
+  <div class="entry-content">
+    {{ content }}
+  </div>
+
+  {% if page.todos and page.todos.size > 0 %}
+    <section class="todo-section">
+      <h2>TODOs</h2>
+      <ul class="todo-list">
+        {% for todo in page.todos %}
+          <li>
+            <input type="checkbox" disabled>
+            <span>{{ todo }}</span>
+          </li>
+        {% endfor %}
+      </ul>
+    </section>
+  {% endif %}
+
+  {% assign entries = site[page.collection] | sort: 'date_modified' | reverse %}
+  {% assign newer_entry = nil %}
+  {% assign older_entry = nil %}
+  {% assign found_current = false %}
+
+  {% for item in entries %}
+    {% if found_current and older_entry == nil %}
+      {% assign older_entry = item %}
+    {% endif %}
+
+    {% if item.url == page.url %}
+      {% assign found_current = true %}
+    {% elsif found_current == false %}
+      {% assign newer_entry = item %}
+    {% endif %}
+  {% endfor %}
+
+  {% if newer_entry or older_entry %}
+    <nav class="entry-nav" aria-label="Entry navigation">
+      {% if newer_entry %}
+        <a class="entry-nav-link" href="{{ newer_entry.url | relative_url }}">&larr; Newer: {{ newer_entry.title }}</a>
+      {% endif %}
+      {% if older_entry %}
+        <a class="entry-nav-link" href="{{ older_entry.url | relative_url }}">Older: {{ older_entry.title }} &rarr;</a>
+      {% endif %}
+    </nav>
+  {% endif %}
+</article>

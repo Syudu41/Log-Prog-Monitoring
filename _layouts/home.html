@@ -1,0 +1,50 @@
+---
+layout: default
+---
+<section class="home-block">
+  <h1 class="home-title">{{ site.title }}</h1>
+  <p class="home-subtitle">{{ site.description }}</p>
+</section>
+
+{% include heatmap.html %}
+
+<section class="home-block">
+  <h2>Categories</h2>
+  <div class="category-pills">
+    {% for collection in site.collections %}
+      {% assign key = collection[0] %}
+      {% if key != "posts" %}
+        {% assign meta = collection[1].metadata %}
+        <a class="category-pill" href="{{ '/' | append: key | append: '/' | relative_url }}">
+          <span class="category-name">{{ meta.label | default: key | escape }}</span>
+          <span class="category-count">{{ collection[1].docs | size }}</span>
+        </a>
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
+
+<section class="home-block">
+  <div class="section-heading">
+    <h2>Recent Entries</h2>
+  </div>
+
+  {% assign all_entries = '' | split: '' %}
+  {% for collection in site.collections %}
+    {% assign key = collection[0] %}
+    {% if key != "posts" %}
+      {% for entry in collection[1].docs %}
+        {% assign all_entries = all_entries | push: entry %}
+      {% endfor %}
+    {% endif %}
+  {% endfor %}
+
+  {% assign recent_entries = all_entries | sort: 'date_modified' | reverse %}
+  {% if recent_entries.size == 0 %}
+    <p>No entries yet. Add markdown files to a collection folder and push.</p>
+  {% endif %}
+
+  {% for entry in recent_entries limit: 10 %}
+    {% include entry-card.html entry=entry %}
+  {% endfor %}
+</section>

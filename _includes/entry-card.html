@@ -1,0 +1,18 @@
+{% assign entry = include.entry %}
+<article class="entry-card">
+  <header class="entry-card-head">
+    <h3 class="entry-title"><a href="{{ entry.url | relative_url }}">{{ entry.title }}</a></h3>
+    <span class="entry-category">{{ entry.collection }}</span>
+  </header>
+
+  {% assign created = entry.date_created | default: entry.date %}
+  <p class="entry-meta">
+    Created {{ created | date: "%b %-d, %Y" }}
+    <span class="meta-separator">&middot;</span>
+    Updated {{ entry.date_modified | default: created | date: "%b %-d, %Y" }}
+  </p>
+
+  {% include tag-pills.html tags=entry.tags %}
+
+  <p class="entry-excerpt">{{ entry.excerpt | strip_html | strip_newlines | truncate: 220 }}</p>
+</article>

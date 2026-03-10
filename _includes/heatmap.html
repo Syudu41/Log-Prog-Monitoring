@@ -1,0 +1,30 @@
+{% assign heatmap = site.data.heatmap | default: {} %}
+{% assign stats = heatmap.stats | default: {} %}
+<section class="home-block">
+  <div class="section-heading">
+    <h2>Contribution Heatmap</h2>
+  </div>
+  <p class="heatmap-stats">
+    {{ stats.total_entries | default: 0 }} entries
+    <span class="meta-separator">&middot;</span>
+    {{ stats.active_days_this_month | default: 0 }} active days this month
+    <span class="meta-separator">&middot;</span>
+    {{ stats.current_streak | default: 0 }} day streak
+  </p>
+
+  <div class="heatmap-scroll" aria-label="Contribution heatmap scroll area">
+    <div class="heatmap-wrapper">
+      <div id="heatmap-months" class="heatmap-months" aria-hidden="true"></div>
+      <div class="heatmap-body">
+        <div class="heatmap-day-labels" aria-hidden="true">
+          <span>M</span>
+          <span>W</span>
+          <span>F</span>
+        </div>
+        <div id="heatmap-grid" class="heatmap-grid" data-weeks="26" role="img" aria-label="Contribution heatmap for the last 6 months"></div>
+      </div>
+    </div>
+  </div>
+
+  <script id="heatmap-data" type="application/json">{{ heatmap.daily | default: {} | jsonify }}</script>
+</section>

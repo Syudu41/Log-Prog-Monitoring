@@ -1,0 +1,70 @@
+title: "ResearchLog"
+description: "Open research notebook - Your Name, PhD"
+url: ""
+baseurl: "/researchlog"
+permalink: pretty
+timezone: UTC
+
+# Author
+author:
+  name: "Your Name"
+  role: "PhD Candidate"
+  field: "Your Research Area"
+
+# Collections
+collections:
+  research:
+    output: true
+    label: "Research"
+    icon: "lab"
+  ideas:
+    output: true
+    label: "Ideas"
+    icon: "idea"
+  experiments:
+    output: true
+    label: "Experiments"
+    icon: "experiment"
+  meetings:
+    output: true
+    label: "Meetings"
+    icon: "meeting"
+  reading:
+    output: true
+    label: "Reading"
+    icon: "reading"
+
+# Build settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# Defaults
+defaults:
+  - scope:
+      type: "research"
+    values:
+      layout: "post"
+  - scope:
+      type: "ideas"
+    values:
+      layout: "post"
+  - scope:
+      type: "experiments"
+    values:
+      layout: "post"
+  - scope:
+      type: "meetings"
+    values:
+      layout: "post"
+  - scope:
+      type: "reading"
+    values:
+      layout: "post"
+
+exclude:
+  - README.md
+  - Gemfile.lock
+  - node_modules
+  - vendor
