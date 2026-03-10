@@ -25,9 +25,9 @@ permalink: /tags/
       {% assign tagged_entries = '' | split: '' %}
 
       {% for collection in site.collections %}
-        {% assign key = collection[0] %}
+        {% assign key = collection.label %}
         {% if key != "posts" %}
-          {% for doc in collection[1].docs %}
+          {% for doc in collection.docs %}
             {% if doc.tags contains tag %}
               {% assign tagged_entries = tagged_entries | push: doc %}
             {% endif %}

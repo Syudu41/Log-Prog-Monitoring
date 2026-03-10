@@ -12,12 +12,12 @@ layout: default
   <h2>Categories</h2>
   <div class="category-pills">
     {% for collection in site.collections %}
-      {% assign key = collection[0] %}
+      {% assign key = collection.label %}
       {% if key != "posts" %}
-        {% assign meta = collection[1].metadata %}
+        {% assign meta = collection.metadata %}
         <a class="category-pill" href="{{ '/' | append: key | append: '/' | relative_url }}">
           <span class="category-name">{{ meta.label | default: key | escape }}</span>
-          <span class="category-count">{{ collection[1].docs | size }}</span>
+          <span class="category-count">{{ collection.docs | size }}</span>
         </a>
       {% endif %}
     {% endfor %}
@@ -31,9 +31,9 @@ layout: default
 
   {% assign all_entries = '' | split: '' %}
   {% for collection in site.collections %}
-    {% assign key = collection[0] %}
+    {% assign key = collection.label %}
     {% if key != "posts" %}
-      {% for entry in collection[1].docs %}
+      {% for entry in collection.docs %}
         {% assign all_entries = all_entries | push: entry %}
       {% endfor %}
     {% endif %}
