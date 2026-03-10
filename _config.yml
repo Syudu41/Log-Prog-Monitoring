@@ -1,7 +1,7 @@
 title: "ResearchLog"
 description: "Open research notebook - Your Name, PhD"
 url: ""
-baseurl: "/researchlog"
+baseurl: "/Log-Prog-Monitoring"
 permalink: pretty
 timezone: UTC
 
