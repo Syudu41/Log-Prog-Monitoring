@@ -1,0 +1,252 @@
+{
+  "version": "1.0.0",
+  "exportedAt": "2026-03-10T16:00:00.000Z",
+  "entries": [
+    {
+      "id": "7f3a30d8-0b9e-41e4-a4dd-0d8f6e3f7a11",
+      "type": "log",
+      "content": "Finished reading the transformer scaling paper and noted open questions.",
+      "rawContent": "Finished reading the transformer scaling paper and noted open questions. #research #paper #reading @next-week",
+      "tags": ["research", "paper", "reading"],
+      "contexts": ["next-week"],
+      "status": null,
+      "createdAt": "2026-03-10T14:34:00.000Z",
+      "completedAt": null
+    },
+    {
+      "id": "7ec3c321-49b4-4785-a9df-f8fe8ba210f6",
+      "type": "log",
+      "content": "Advisor meeting focused on baseline reproducibility concerns.",
+      "rawContent": "Advisor meeting focused on baseline reproducibility concerns. #meeting #experiment",
+      "tags": ["meeting", "experiment"],
+      "contexts": [],
+      "status": null,
+      "createdAt": "2026-03-10T11:02:00.000Z",
+      "completedAt": null
+    },
+    {
+      "id": "cc9a4922-b5ea-4839-b3dc-987786f59456",
+      "type": "todo",
+      "content": "Draft week 11 literature review memo for advisor.",
+      "rawContent": "Draft week 11 literature review memo for advisor. #paper #meeting @friday",
+      "tags": ["paper", "meeting"],
+      "contexts": ["friday"],
+      "status": "in-progress",
+      "createdAt": "2026-03-10T09:12:00.000Z",
+      "completedAt": null
+    },
+    {
+      "id": "9f00f7cb-d4d3-4d6b-9d12-cab4a48d2b9e",
+      "type": "log",
+      "content": "IDEA: compare sparse attention variants for ablation schedule.",
+      "rawContent": "IDEA: compare sparse attention variants for ablation schedule. #idea #experiment",
+      "tags": ["idea", "experiment"],
+      "contexts": [],
+      "status": null,
+      "createdAt": "2026-03-10T08:18:00.000Z",
+      "completedAt": null
+    },
+    {
+      "id": "67f98fdd-67a8-46c6-bf6c-e0d87d7c2b4a",
+      "type": "log",
+      "content": "Ran pilot experiment with dropout sweep and logged seed variance.",
+      "rawContent": "Ran pilot experiment with dropout sweep and logged seed variance. #experiment #research",
+      "tags": ["experiment", "research"],
+      "contexts": [],
+      "status": null,
+      "createdAt": "2026-03-09T16:12:00.000Z",
+      "completedAt": null
+    },
+    {
+      "id": "e2bb5f85-47d6-4423-b1d7-79e06b56d6a4",
+      "type": "log",
+      "content": "Rewrote evaluation script notes and outlined failure cases.",
+      "rawContent": "Rewrote evaluation script notes and outlined failure cases. #research #writing",
+      "tags": ["research", "writing"],
+      "contexts": [],
+      "status": null,
+      "createdAt": "2026-03-09T10:45:00.000Z",
+      "completedAt": null
+    },
+    {
+      "id": "dbda66a4-2388-4ece-aa5c-b53cf2ce28ef",
+      "type": "log",
+      "content": "Collected week-over-week validation drift metrics for dashboard notes.",
+      "rawContent": "Collected week-over-week validation drift metrics for dashboard notes. #experiment #research",
+      "tags": ["experiment", "research"],
+      "contexts": [],
+      "status": null,
+      "createdAt": "2026-03-03T15:20:00.000Z",
+      "completedAt": null
+    },
+    {
+      "id": "7ea35cb7-af68-4c7f-94e2-57a4b4fca008",
+      "type": "todo",
+      "content": "Prepare slide with error bars for group standup.",
+      "rawContent": "Prepare slide with error bars for group standup. #meeting #experiment @tomorrow",
+      "tags": ["meeting", "experiment"],
+      "contexts": ["tomorrow"],
+      "status": "completed",
+      "createdAt": "2026-03-03T09:05:00.000Z",
+      "completedAt": "2026-03-04T07:50:00.000Z"
+    },
+    {
+      "id": "1f2f5dae-fce4-412f-b338-8ad39cb5f2dd",
+      "type": "log",
+      "content": "Sketched section order for the methods chapter draft.",
+      "rawContent": "Sketched section order for the methods chapter draft. #writing #paper",
+      "tags": ["writing", "paper"],
+      "contexts": [],
+      "status": null,
+      "createdAt": "2026-03-03T08:10:00.000Z",
+      "completedAt": null
+    },
+    {
+      "id": "1459f7ee-4ba3-4464-8d82-c6f3750df5f6",
+      "type": "log",
+      "content": "Compared embedding pooling approaches in notebook and archived outputs.",
+      "rawContent": "Compared embedding pooling approaches in notebook and archived outputs. #experiment #reading",
+      "tags": ["experiment", "reading"],
+      "contexts": [],
+      "status": null,
+      "createdAt": "2026-02-24T13:22:00.000Z",
+      "completedAt": null
+    },
+    {
+      "id": "4ecf9562-50cb-4d68-8f8b-3bc8e17f2d92",
+      "type": "log",
+      "content": "Documented annotation schema disagreements for next advisor sync.",
+      "rawContent": "Documented annotation schema disagreements for next advisor sync. #meeting #research @next-sync",
+      "tags": ["meeting", "research"],
+      "contexts": ["next-sync"],
+      "status": null,
+      "createdAt": "2026-02-24T09:16:00.000Z",
+      "completedAt": null
+    },
+    {
+      "id": "067a3e19-9be1-4448-aa61-4f8b44f28d37",
+      "type": "log",
+      "content": "Summarized three survey papers into a comparison table.",
+      "rawContent": "Summarized three survey papers into a comparison table. #paper #reading #research",
+      "tags": ["paper", "reading", "research"],
+      "contexts": [],
+      "status": null,
+      "createdAt": "2026-02-10T17:01:00.000Z",
+      "completedAt": null
+    },
+    {
+      "id": "3d803b5f-4b61-4bfc-a4ab-518dff689b97",
+      "type": "todo",
+      "content": "Email advisor a concise update before weekly check-in.",
+      "rawContent": "Email advisor a concise update before weekly check-in. #meeting @thursday",
+      "tags": ["meeting"],
+      "contexts": ["thursday"],
+      "status": "pending",
+      "createdAt": "2026-02-10T12:12:00.000Z",
+      "completedAt": null
+    },
+    {
+      "id": "3ed1e3ce-c170-4bcf-9996-6e7c8f0ef9cd",
+      "type": "log",
+      "content": "IDEA: test curriculum schedule for low-resource subset.",
+      "rawContent": "IDEA: test curriculum schedule for low-resource subset. #idea #experiment",
+      "tags": ["idea", "experiment"],
+      "contexts": [],
+      "status": null,
+      "createdAt": "2026-02-10T08:49:00.000Z",
+      "completedAt": null
+    },
+    {
+      "id": "40e3aa30-a7b0-4e1f-9c57-c7f3f6b23b68",
+      "type": "log",
+      "content": "Consolidated advisor action items from committee meeting notes.",
+      "rawContent": "Consolidated advisor action items from committee meeting notes. #meeting #deadline",
+      "tags": ["meeting", "deadline"],
+      "contexts": [],
+      "status": null,
+      "createdAt": "2025-12-10T15:08:00.000Z",
+      "completedAt": null
+    },
+    {
+      "id": "e66f9c9b-2085-4ed7-b9e0-6959d1509d5d",
+      "type": "log",
+      "content": "Reproduced baseline with fixed random seed and noted stability.",
+      "rawContent": "Reproduced baseline with fixed random seed and noted stability. #experiment #research",
+      "tags": ["experiment", "research"],
+      "contexts": [],
+      "status": null,
+      "createdAt": "2025-12-10T10:06:00.000Z",
+      "completedAt": null
+    },
+    {
+      "id": "d8f6d95b-92d3-4b03-bb4e-9f194fd89afd",
+      "type": "todo",
+      "content": "Finalize conference abstract paragraph one and two.",
+      "rawContent": "Finalize conference abstract paragraph one and two. #paper #deadline @submission-week",
+      "tags": ["paper", "deadline"],
+      "contexts": ["submission-week"],
+      "status": "in-progress",
+      "createdAt": "2025-12-10T08:22:00.000Z",
+      "completedAt": null
+    },
+    {
+      "id": "5a2af548-f8f7-4fc2-b838-ed870f6fdcb2",
+      "type": "log",
+      "content": "Started lab notebook migration and defined new naming convention.",
+      "rawContent": "Started lab notebook migration and defined new naming convention. #research #organization",
+      "tags": ["research", "organization"],
+      "contexts": [],
+      "status": null,
+      "createdAt": "2025-09-10T14:31:00.000Z",
+      "completedAt": null
+    },
+    {
+      "id": "d37f6384-0cc6-4ebe-bcf0-3d0d5557df3d",
+      "type": "log",
+      "content": "Read two foundational papers and mapped claims to open questions.",
+      "rawContent": "Read two foundational papers and mapped claims to open questions. #reading #paper #research",
+      "tags": ["reading", "paper", "research"],
+      "contexts": [],
+      "status": null,
+      "createdAt": "2025-09-10T11:04:00.000Z",
+      "completedAt": null
+    },
+    {
+      "id": "4b8fbd24-5f89-41c6-a89a-fd13fedf77d8",
+      "type": "todo",
+      "content": "TODO: set up weekly experiment review ritual.",
+      "rawContent": "TODO: set up weekly experiment review ritual. #deadline #experiment @monday",
+      "tags": ["deadline", "experiment"],
+      "contexts": ["monday"],
+      "status": "completed",
+      "createdAt": "2025-09-10T08:10:00.000Z",
+      "completedAt": "2025-09-12T09:00:00.000Z"
+    },
+    {
+      "id": "3d9a79cc-c490-4ee0-baf1-d6fe1bd4a100",
+      "type": "log",
+      "content": "Wrote synthesis paragraph connecting method assumptions to data limits.",
+      "rawContent": "Wrote synthesis paragraph connecting method assumptions to data limits. #paper #writing",
+      "tags": ["paper", "writing"],
+      "contexts": [],
+      "status": null,
+      "createdAt": "2026-03-01T13:41:00.000Z",
+      "completedAt": null
+    },
+    {
+      "id": "53dccf6f-c658-4fbf-8d4f-c31253d3e8d8",
+      "type": "log",
+      "content": "Prepared quick benchmark script for ablation reruns.",
+      "rawContent": "Prepared quick benchmark script for ablation reruns. #experiment #research",
+      "tags": ["experiment", "research"],
+      "contexts": [],
+      "status": null,
+      "createdAt": "2026-02-02T10:02:00.000Z",
+      "completedAt": null
+    }
+  ],
+  "settings": {
+    "version": "1.0.0",
+    "createdAt": "2025-09-10T09:00:00.000Z"
+  }
+}
