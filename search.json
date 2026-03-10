@@ -1,0 +1,29 @@
+---
+layout: null
+---
+[
+{% assign all_entries = '' | split: '' %}
+{% for collection in site.collections %}
+  {% assign key = collection[0] %}
+  {% if key != "posts" %}
+    {% for entry in collection[1].docs %}
+      {% assign all_entries = all_entries | push: entry %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+{% assign all_entries = all_entries | sort: 'date_modified' | reverse %}
+{% for entry in all_entries %}
+  {
+    "title": {{ entry.title | jsonify }},
+    "url": {{ entry.url | relative_url | jsonify }},
+    "category": {{ entry.collection | jsonify }},
+    {% if entry.tags %}
+    "tags": {{ entry.tags | jsonify }},
+    {% else %}
+    "tags": [],
+    {% endif %}
+    "date": {{ entry.date_created | default: entry.date | date: "%Y-%m-%d" | jsonify }},
+    "excerpt": {{ entry.excerpt | strip_html | strip_newlines | truncate: 220 | jsonify }}
+  }{% unless forloop.last %},{% endunless %}
+{% endfor %}
+]

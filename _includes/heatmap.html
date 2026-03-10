@@ -1,5 +1,8 @@
-{% assign heatmap = site.data.heatmap | default: {} %}
-{% assign stats = heatmap.stats | default: {} %}
+{% assign heatmap = site.data.heatmap %}
+{% assign stats = nil %}
+{% if heatmap %}
+  {% assign stats = heatmap.stats %}
+{% endif %}
 <section class="home-block">
   <div class="section-heading">
     <h2>Contribution Heatmap</h2>
@@ -26,5 +29,11 @@
     </div>
   </div>
 
-  <script id="heatmap-data" type="application/json">{{ heatmap.daily | default: {} | jsonify }}</script>
+  <script id="heatmap-data" type="application/json">
+    {% if heatmap and heatmap.daily %}
+      {{ heatmap.daily | jsonify }}
+    {% else %}
+      {}
+    {% endif %}
+  </script>
 </section>
